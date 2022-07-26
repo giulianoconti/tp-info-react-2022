@@ -5,13 +5,13 @@ export const Footer = () => {
     <footer className="p-4 h-16 bg-gray-200 sm:p-6 dark:bg-gray-900 flex items-center justify-between">
       <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
         © {currentYear}{" "}
-        <a href="https://www.linkedin.com/in/giulianoconti/" className="hover:underline">
-          GiuliannT
+        <a href="https://portfolio-sm-giulianoconti.vercel.app/" className="border-b border-gray-400 hover:text-blue-500 hover:border-blue-500 ">
+          Giuliano Conti
         </a>
         . Todos Los Derechos Reservados.
       </span>
       <div className="flex space-x-6 justify-center">
-        <a href="https://www.linkedin.com/in/giulianoconti/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+        <a href="https://www.linkedin.com/in/giulianoconti/" className="text-gray-500 hover:text-blue-500">
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
             <path
               fillRule="evenodd"
@@ -22,7 +22,7 @@ export const Footer = () => {
           <span className="sr-only">Linkedin account</span>
         </a>
 
-        <a href="https://github.com/GiuliannT" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+        <a href="https://github.com/GiuliannT" className="text-gray-500 hover:text-blue-500">
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path
               fillRule="evenodd"
@@ -33,7 +33,7 @@ export const Footer = () => {
           <span className="sr-only">GitHub account</span>
         </a>
 
-        <a href="https://www.instagram.com/giulianocontii/" className="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+        <a href="https://www.instagram.com/giulianocontii/" className="text-gray-500 hover:text-blue-500">
           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path
               fillRule="evenodd"

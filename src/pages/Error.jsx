@@ -1,6 +1,6 @@
 export const Error = ({ message }) => {
   return (
-    <div className="h-screen dark:bg-gray-800">
+    <div className="h-screen bg-white dark:bg-gray-800">
       <div className="pt-12">
         <div className="container max-w-2xl mx-auto bg-gray-200 p-6 rounded-lg text-red-600 border border-red-600 dark:bg-gray-900">
           <svg

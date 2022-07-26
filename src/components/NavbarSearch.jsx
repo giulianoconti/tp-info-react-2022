@@ -1,14 +1,21 @@
-import { useRef } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { SearchContext } from "../SearchContext";
 
 export const NavbarSearch = ({ classForPc, classForPhone }) => {
   const inputRef = useRef();
   const navigate = useNavigate();
+  const { searchInput } = useContext(SearchContext);
+
+  useEffect(() => {
+    inputRef.current.value = searchInput;
+  }, [searchInput]);
 
   const searchResult = (e) => {
     e.preventDefault();
-    navigate(`/result/${inputRef.current.value}/1`);
-  }
+    scrollTo(0, 0);
+    navigate(`/search/${inputRef.current.value}/publishedAt/1`);
+  };
 
   return (
     <form className={classForPc + " " + classForPhone} onSubmit={searchResult}>
@@ -23,8 +30,8 @@ export const NavbarSearch = ({ classForPc, classForPhone }) => {
       </div>
       <input
         ref={inputRef}
-        className="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-        placeholder="Search..."
+        className="block outline-none p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border-2 border-gray-300 sm:text-sm focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:border-blue-500"
+        placeholder="Buscar..."
       />
     </form>
   );

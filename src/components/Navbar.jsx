@@ -10,6 +10,7 @@ export const Navbar = ({ darkMode, setDarkMode }) => {
   };
 
   const handleDarkMode = () => {
+    localStorage.setItem("darkMode", !darkMode);
     setDarkMode(!darkMode);
   };
 
@@ -17,9 +18,9 @@ export const Navbar = ({ darkMode, setDarkMode }) => {
     <div className="h-16">
       <nav className="fixed z-50 h-16 w-full bg-gray-200 items-center py-3 dark:bg-gray-900">
         <div className="flex flex-wrap justify-between items-center">
-          <Link to="/" className="flex items-center ml-4 md:w-60">
+          <Link className="flex items-center ml-4 md:w-60" to="/">
             <img src="/images/logo.png" className="mr-3 h-6 sm:h-9" alt="Logo" />
-            <span className="self-center text-xl font-semibold whitespace-nowrap text-blue-500">Noticias</span>
+            <span className="self-center text-xl font-semibold whitespace-nowrap text-blue-500">Giuliano Noticias</span>
           </Link>
 
           <div className="flex md:w-56">
@@ -51,23 +52,23 @@ export const Navbar = ({ darkMode, setDarkMode }) => {
               <li>
                 <NavLink
                   to="/"
-                  className="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 hover:text-blue-600 md:p-0 md:dark:hover:bg-transparent dark:border-gray-700 dark:hover:bg-gray-700"
+                  className="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 hover:text-blue-500 md:p-0 md:dark:hover:bg-transparent dark:border-gray-700 dark:hover:bg-gray-700"
                 >
                   Últimas Noticias
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/result/tecnologia/1"
-                  className="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 hover:text-blue-600 md:p-0 md:dark:hover:bg-transparent dark:border-gray-700 dark:hover:bg-gray-700"
+                  to="/search/tecnologia/publishedAt/1"
+                  className="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 hover:text-blue-500 md:p-0 md:dark:hover:bg-transparent dark:border-gray-700 dark:hover:bg-gray-700"
                 >
                   Tecnología
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to="/result/politica/1"
-                  className="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 hover:text-blue-600 md:p-0 md:dark:hover:bg-transparent dark:border-gray-700 dark:hover:bg-gray-700"
+                  to="/search/politica/publishedAt/1"
+                  className="block py-2 pr-4 pl-3 text-gray-400 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 hover:text-blue-500 md:p-0 md:dark:hover:bg-transparent dark:border-gray-700 dark:hover:bg-gray-700"
                 >
                   Política
                 </NavLink>
