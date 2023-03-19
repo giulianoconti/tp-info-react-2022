@@ -13,14 +13,10 @@
 
 https://user-images.githubusercontent.com/88043910/197541868-407fb299-6638-402f-9e92-f59589b8679d.mp4
 
-## News App
-
-![NewsApp](https://raw.githubusercontent.com/giulianoconti/api/main/imagesProjects/images_1920x1080/informatorio.webp?raw=true)
-
-### Built With
+### Tecnologías Utilizadas
 
 * [React](https://reactjs.org/)
-* [Firebase](https://firebase.google.com/)
+* [Tailwind](https://tailwindcss.com/)
 
 ### Link
 
